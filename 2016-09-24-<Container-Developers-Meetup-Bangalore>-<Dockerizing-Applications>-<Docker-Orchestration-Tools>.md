@@ -71,7 +71,7 @@ Orchestration is the automated arrangement, coordination, and management of comp
 * Apache Mesos (Or on Mesoshpere's DCOS)
 * Apache Zookeeper
 * Install Marathon on the Cluster
-* Create `my_application.json` file
+* Create `basic-3.json` file
 * run `curl -X POST http://marthon-master:PORT/v2/apps -d @basic-3.json -H "Content-type: application/json"`
 
 ---
