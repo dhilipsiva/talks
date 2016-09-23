@@ -20,7 +20,7 @@ dhilipsiva@gmail.com
 # I have no idea what I am talking about :stuck_out_tongue_winking_eye:
 - If you think that I got something wrong, then I probably am. So please feel free to correct me.
 - After all, it is the mistakes and the lessons we learn from it - are the very things that define us.
-- **Constructive criticism** is more than welcomed! :) :heart:
+- **Constructive criticism** is more than welcomed! :smile:
 
 ---
 
@@ -34,6 +34,7 @@ dhilipsiva@gmail.com
 Orchestration is the automated arrangement, coordination, and management of computer systems, middleware, and services. (From [Wikipedia](https://en.wikipedia.org/wiki/Orchestration_(computing)))
 
 ---
+
 
 ---
 
