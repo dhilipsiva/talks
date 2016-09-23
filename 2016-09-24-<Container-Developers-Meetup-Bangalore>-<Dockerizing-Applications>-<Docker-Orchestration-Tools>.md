@@ -63,7 +63,9 @@ Orchestration is the automated arrangement, coordination, and management of comp
 ### https://github.com/dhilipsiva/talks
 
 Copyright &copy; 2016 [dhilipsiva](https://github.com/dhilipsiva)
+
 This copy is released under the [MIT License](https://github.com/dhilipsiva/talks/blob/master/LICENSE)
+
 [Source Code](https://github.com/dhilipsiva/talks/blob/master/2016-09-24-%3CContainer-Developers-Meetup-Bangalore%3E-%3CDockerizing-Applications%3E-%3CDocker-Orchestration-Tools%3E.md)
 
 # Questions:question:
