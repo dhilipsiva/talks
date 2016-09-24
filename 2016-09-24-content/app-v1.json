@@ -1,0 +1,23 @@
+{
+  "kind": "Pod",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "kubetut",
+    "labels": {
+      "app": "webapp"
+    }
+  },
+  "spec": {
+    "containers": [
+      {
+        "name": "kubetut",
+        "image": "dhilipsiva/kubetut:1",
+        "ports": [
+          {
+            "containerPort": 8000
+          }
+        ]
+      }
+    ]
+  }
+}
