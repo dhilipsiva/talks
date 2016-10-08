@@ -27,7 +27,7 @@ class SimpleHandler(http.server.BaseHTTPRequestHandler):
         body = b"version(%d): %b" % (VERSION, hostname)
         self.wfile.write(body)
 
-address = ('0.0.0.0', 8000)
+address = ('0.0.0.0', 8080)
 server = http.server.HTTPServer(address, SimpleHandler)
 print('Started http server')
 server.serve_forever()

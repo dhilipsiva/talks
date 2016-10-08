@@ -1,4 +1,4 @@
-FROM python:3.5
+FROM python:3.5-slim
 RUN mkdir /code
 WORKDIR /code
 ADD server.py .

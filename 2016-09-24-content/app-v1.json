@@ -11,10 +11,10 @@
     "containers": [
       {
         "name": "kubetut",
-        "image": "dhilipsiva/kubetut:1",
+        "image": "dhilipsiva/kubetut:4",
         "ports": [
           {
-            "containerPort": 8000
+            "containerPort": 8080
           }
         ]
       }
