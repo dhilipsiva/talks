@@ -55,15 +55,21 @@ https://github.com/OAI/OpenAPI-Specification
 
 ---
 
-![Google]("https://raw.githubusercontent.com/dhilipsiva/talks/master/2016-11-12-content/01-google-search.png" "Google Search")
+# Google Search Activity
+
+![Google](https://raw.githubusercontent.com/dhilipsiva/talks/master/2016-11-12-content/01-google-search.png)
 
 ---
 
-![GitHub 1]("https://raw.githubusercontent.com/dhilipsiva/talks/master/2016-11-12-content/02-github-1.png" "GitHub 1")
+# GitHub - Starts / Forks / Pulls
+
+![GitHub 1](https://raw.githubusercontent.com/dhilipsiva/talks/master/2016-11-12-content/02-github-1.png)
 
 ---
 
-![GitHub 2]("https://raw.githubusercontent.com/dhilipsiva/talks/master/2016-11-12-content/02-github-2.png" "GitHub 2")
+# Issues / Events / Commits
+
+![GitHub 2](https://raw.githubusercontent.com/dhilipsiva/talks/master/2016-11-12-content/02-github-2.png)
 
 ---
 
