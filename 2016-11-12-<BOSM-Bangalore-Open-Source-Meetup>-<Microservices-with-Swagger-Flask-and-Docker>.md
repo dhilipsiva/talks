@@ -51,7 +51,7 @@ https://github.com/OAI/OpenAPI-Specification
 * 2010: Tony Tam @Wordnik founded Swagger
 * 2010-2014: Development, Growth, Adoption, Tooling, Community
 * Early 2015: Swagger acquired by SmartBear
-* Late 2015: Swagger donated to "Linux Foundation" as“OpenAPI Specification” 
+* Late 2015: Swagger donated to "Linux Foundation" as“OpenAPI Specification”
 
 ---
 
@@ -71,7 +71,7 @@ https://github.com/OAI/OpenAPI-Specification
 
 ![GitHub 2](https://raw.githubusercontent.com/dhilipsiva/talks/master/2016-11-12-content/02-github-2.png)
 
---- 
+---
 
 # Tooling
 
@@ -95,7 +95,7 @@ https://github.com/OAI/OpenAPI-Specification
 
 # Break
 
---- 
+---
 
 # Hands On
 
@@ -129,6 +129,7 @@ Copyright &copy; 2016 [dhilipsiva](https://github.com/dhilipsiva)
 This copy is released under the [MIT License](https://github.com/dhilipsiva/talks/blob/master/LICENSE)
 
 [Source Code](https://github.com/dhilipsiva/talks/blob/master/2016-11-12-%3CBOSM-Bangalore-Open-Source-Meetup%3E-%3CMicroservices-with-Swagger-Flask-and-Docker%3E.md)
+(SlideShare Link)(http://www.slideshare.net/dhilipsiva/microservices-with-swagger-flask-and-docker)
 
 # Questions:question:
 [http://dhilipsiva.com](http://dhilipsiva.com)
