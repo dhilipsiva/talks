@@ -71,19 +71,64 @@ https://github.com/OAI/OpenAPI-Specification
 
 ![GitHub 2](https://raw.githubusercontent.com/dhilipsiva/talks/master/2016-11-12-content/02-github-2.png)
 
+--- 
+
+# Tooling
+
+* [swagger-core](https://github.com/swagger-api/swagger-core)
+* [swagger-ui](https://github.com/swagger-api/swagger-ui)
+* [swagger-codegen](https://github.com/swagger-api/swagger-codegen)
+* [swagger-editor](https://github.com/swagger-api/swagger-editor)
+* [swagger-hub](https://swaggerhub.com/)
+
 ---
 
+# Few of the Language Tools
+
+* [swagger-node](https://github.com/swagger-api/swagger-node)
+* [django-rest-swagger](https://github.com/marcgibbons/django-rest-swagger)
+* [swagger-php](https://github.com/zircote/swagger-php)
+* [swagger-js](https://github.com/swagger-api/swagger-js)
+* [go-swagger](https://github.com/go-swagger/go-swagger)
+
+---
 
 # Break
 
----
-
-# Swagger
-
 --- 
 
-# Flask
+# Hands On
+
+Connection Example Repo: https://github.com/ds-forks/connexion-example
+
+```
+swagger-codegen generate -i swagger.yaml -l java -o /tmp/swag
+connexion run swagger.yaml --stub --debug
+```
 
 ---
 
 # Docker
+
+```
+    $ docker build -t connexion-example .
+    $ docker run -d -p 8080:8080 connexion-example
+    $ ./test.sh # do some test HTTP requests
+```
+
+
+---
+
+
+# Thanks! :pray:
+
+### https://github.com/dhilipsiva/talks
+
+Copyright &copy; 2016 [dhilipsiva](https://github.com/dhilipsiva)
+
+This copy is released under the [MIT License](https://github.com/dhilipsiva/talks/blob/master/LICENSE)
+
+[Source Code](https://github.com/dhilipsiva/talks/blob/master/2016-11-12-%3CBOSM-Bangalore-Open-Source-Meetup%3E-%3CMicroservices-with-Swagger-Flask-and-Docker%3E.md)
+
+# Questions:question:
+[http://dhilipsiva.com](http://dhilipsiva.com)
