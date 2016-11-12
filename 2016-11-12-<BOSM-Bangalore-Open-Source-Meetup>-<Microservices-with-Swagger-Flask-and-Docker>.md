@@ -129,7 +129,7 @@ Copyright &copy; 2016 [dhilipsiva](https://github.com/dhilipsiva)
 This copy is released under the [MIT License](https://github.com/dhilipsiva/talks/blob/master/LICENSE)
 
 [Source Code](https://github.com/dhilipsiva/talks/blob/master/2016-11-12-%3CBOSM-Bangalore-Open-Source-Meetup%3E-%3CMicroservices-with-Swagger-Flask-and-Docker%3E.md)
-(SlideShare Link)(http://www.slideshare.net/dhilipsiva/microservices-with-swagger-flask-and-docker)
+[SlideShare Link](http://www.slideshare.net/dhilipsiva/microservices-with-swagger-flask-and-docker)
 
 # Questions:question:
 [http://dhilipsiva.com](http://dhilipsiva.com)
