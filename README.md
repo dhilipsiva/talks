@@ -2,8 +2,7 @@
 
 Notes for Talks / Presentations / Demos that I give at various events.
 
-# I have no idea what I am talking about :stuck_out_tongue_winking_eye:
-
+---
 
 ## [@dhilipsiva](https://github.com/dhilipsiva)
 
@@ -21,8 +20,29 @@ Tech Lead, Full-Stack & DevOps - @Appknox
 
 ---
 
+# I have no idea what I am talking about :stuck_out_tongue_winking_eye:
+
+---
+
+
 # Talks that I gave that resides in other repos
 
 ### [Muthayammal Engineering College's GEMS Club inauguration talk](https://github.com/dhilipsiva/mec-gems)
 ### [Intro & Comparison to Open Source PaaS Solutions (Deis / Dokku / Flynn)](https://github.com/dhilipsiva/open-source-paas)
 ### [Introduction to Big Data with practical use-cases](https://github.com/dhilipsiva/intro-to-big-data)
+
+---
+
+# Thanks! :pray:
+
+### https://github.com/dhilipsiva/talks
+
+Copyright &copy; 2016 [dhilipsiva](https://github.com/dhilipsiva)
+
+This copy is released under the [MIT License](https://github.com/dhilipsiva/talks/blob/master/LICENSE)
+
+[Source Code](https://github.com/dhilipsiva/talks/blob/master/%(file_name)s)
+[SlideShare Link](http://www.slideshare.net/dhilipsiva/microservices-with-swagger-flask-and-docker)
+
+# Questions:question:
+[http://dhilipsiva.com](http://dhilipsiva.com)
