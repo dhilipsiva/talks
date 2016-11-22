@@ -7,7 +7,7 @@ template: invert
 ## [@dhilipsiva](https://github.com/dhilipsiva)
 Tech Lead, Full-Stack & DevOps - @Appknox
 [http://dhilipsiva.com](http://dhilipsiva.com)
-dhilipsiva@gmail.com 
+dhilipsiva@gmail.com
 
 ---
 
@@ -34,7 +34,7 @@ dhilipsiva@gmail.com
 ---
 
 # Orchestration
-![](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/Orchestration.jpg)
+![](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/2016-09-24/Orchestration.jpg)
 
 ---
 
@@ -96,10 +96,10 @@ Orchestration is the automated arrangement, coordination, and management of comp
 ```
 
 ---
-![](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/marathon-1.png)
+![](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/2016-09-24/marathon-1.png)
 
 ---
-![](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/marathon-2.png)
+![](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/2016-09-24/marathon-2.png)
 
 ---
 
@@ -130,7 +130,7 @@ $ helios-solo hosts
 ---
 
 ```shell
-# Create an nginx job using the nginx container image, 
+# Create an nginx job using the nginx container image,
 # exposing it on the host on port 8080
 $ helios create nginx:v1 nginx:1.7.1 -p http=80:8080
 # Check that the job is listed
@@ -229,19 +229,19 @@ $ python env.py build stop --image dev/.*
 # Maestro
 ```yaml
 templates:
-  nodejs: 
+  nodejs:
     config:
       command: /usr/bin/node /var/www/app.js
-      ports: 
-        - '80'  
+      ports:
+        - '80'
       environment:
         - PORT=80
     buildspec:
       url: github.com/toscanini/docker-nodejs
     require:
-      mongodb: 
+      mongodb:
         port: '27017'
-  mongodb:     
+  mongodb:
     config:
       command: /usr/bin/mongod --config /etc/mongodb.conf
     buildspec:
@@ -250,7 +250,7 @@ templates:
 
 ---
 
-Maestro provides the ability to easily launch, orchestrate and manage mulitple Docker containers as single unit. 
+Maestro provides the ability to easily launch, orchestrate and manage mulitple Docker containers as single unit.
 
 ```
 maestro build
