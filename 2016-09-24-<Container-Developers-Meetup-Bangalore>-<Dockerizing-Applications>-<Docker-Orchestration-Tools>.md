@@ -34,7 +34,7 @@ dhilipsiva@gmail.com
 ---
 
 # Orchestration
-![](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/2016-09-24/Orchestration.jpg)
+![](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/2016-09-24/orchestration.jpg)
 
 ---
 
