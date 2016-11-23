@@ -39,13 +39,24 @@ template: invert
 
 # DevOps
 
-![DevOps](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/2016-11-26/devops.svg "DevOps")
+![DevOps](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/2016-11-26/devops.png "DevOps")
 
 ---
 
 
 #### DevOps is a development methodology with a set of practices aimed at bridging the gap between Development and Operations, emphasizing communication and collaboration, continuous integration, quality assurance and delivery with automated deployment - Wikipedia
 
+---
+
+# DevOps Toolchain
+
+1. **Code** – Code development and review, Version control tools, code merging
+1. **Build** – continuous integration tools, build status
+1. **Test** – Test and results determine performance
+1. **Package** – Artifact repository, application pre-deployment staging
+1. **Release** – Change management, release approvals, release automation
+1. **Configure** – Infrastructure configuration and management, Infrastructure as Code tools
+1. **Monitor** – Applications performance monitoring, end user experience
 
 ---
 
