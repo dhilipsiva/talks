@@ -1,22 +1,20 @@
+<!--
+$theme: gaia
+template: invert
+-->
+
 # talks
 
 Notes for Talks / Presentations / Demos that I give at various events.
 
 ---
 
-## [@dhilipsiva](https://github.com/dhilipsiva)
-
-Tech Lead, Full-Stack & DevOps - @Appknox
-[http://dhilipsiva.com](http://dhilipsiva.com)
-[dhilipsiva@gmail.com](mailto:dhilipsiva@gmail.com)
-
----
-
-# @dhilipsiva
 - Tech Lead, Full-Stack & DevOps - @Appknox
 - I code for Web, Mobile, Embedded & IoT. Open-Source Fanatic. Big Data & Machine Learning Enthusiast. Dad. Atheist
 - So primarily a Developer + little bit of this & that
 - Jack of all trades & Master of none
+- [http://dhilipsiva.com](http://dhilipsiva.com)
+- [dhilipsiva@gmail.com](mailto:dhilipsiva@gmail.com)
 
 ---
 
@@ -42,7 +40,7 @@ Copyright &copy; 2016 [dhilipsiva](https://github.com/dhilipsiva)
 This copy is released under the [MIT License](https://github.com/dhilipsiva/talks/blob/master/LICENSE)
 
 [Source Code](https://github.com/dhilipsiva/talks/blob/master/%(file_name)s)
-[SlideShare Link](http://www.slideshare.net/dhilipsiva/microservices-with-swagger-flask-and-docker)
+[SlideShare Link](http://www.slideshare.net/dhilipsiva/slide)
 
 # Questions:question:
 [http://dhilipsiva.com](http://dhilipsiva.com)
