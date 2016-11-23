@@ -24,7 +24,6 @@ template: invert
 
 # I have no idea what I am talking about :stuck_out_tongue_winking_eye:
 
-
 ---
 
 # The dark days before DevOps
@@ -50,7 +49,6 @@ template: invert
 - Agile
 
 ---
-
 
 #### DevOps is a development methodology with a set of practices aimed at bridging the gap between Development and Operations, emphasizing communication and collaboration, continuous integration, quality assurance and delivery with automated deployment - Wikipedia
 
@@ -131,6 +129,11 @@ Infrastructure configuration and management, Infrastructure as Code tools
 
 # Containers (Docker &  rkt)
 
+Do no re-invent the wheel (DRY). Lets use a slide that has been battle tested multiple times.
+
+- http://www.slideshare.net/dotCloud/why-docker
+- http://www.slideshare.net/giancosta86/introduction-to-docker-43302266
+
 ---
 
 # 12 Factor App
@@ -152,6 +155,7 @@ Infrastructure configuration and management, Infrastructure as Code tools
 ---
 
 # ..contd
+
 - **Disposability** - Maximize robustness with fast startup and graceful shutdown
 - **Dev/prod parity** - Keep development, staging, and production as similar as possible
 - **Logs** - Treat logs as event streams
@@ -159,8 +163,13 @@ Infrastructure configuration and management, Infrastructure as Code tools
 
 ---
 
-# AWS
-Demo
+# AWS Demo
+
+- Free Tier
+- Login without `pem` file
+- Manually - setup server
+- Write simple deploy script
+- Deploy with Docker
 
 ---
 
