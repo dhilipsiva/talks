@@ -26,10 +26,22 @@ template: invert
 
 ---
 
+# Prerequisite
+
+- Comfortable with programming
+- Comfortable with basic *nix commands
+- A laptop with working docker installation
+- `pip install fabric` (sudo might be required)
+- `docker pull python:2.7`
+- An AWS account with free tier available.
+- Prefer Linux / Mac. I cannot help set anyone on windows - because I have never used it myself for Pyhton / AWS / SSH / Docker.
+
+---
+
 # The dark days before DevOps
 
 * Developers, Testers & SysAdmins Silos
-* Functionally Separated 
+* Functionally Separated
 * Blame Culture
 * Buggy Code
 * Insanely longer deployment process
@@ -56,17 +68,17 @@ template: invert
 
 # DevOps Toolchain
 
-- Code 
-- Build 
-- Test 
-- Package 
-- Release 
+- Code
+- Build
+- Test
+- Package
+- Release
 - Configure
 - Monitor
 
 ---
 
-# Code 
+# Code
 
 Code development and review, Version control tools, code merging
 
@@ -82,9 +94,9 @@ Code development and review, Version control tools, code merging
 
 # Build, Test, Package
 
-Continuous integration tools, build status. 
+Continuous integration tools, build status.
 
-Test and results determine performance. 
+Test and results determine performance.
 
 Artifact repository, application pre-deployment staging
 
@@ -95,13 +107,13 @@ Artifact repository, application pre-deployment staging
 
 ---
 
-# Release, Configure 
+# Release, Configure
 
 Change management, release approvals, release automation
 
 Infrastructure configuration and management, Infrastructure as Code tools
 
-- Chef / Puppet / Fabric / Kubernetes / Mesos / 
+- Chef / Puppet / Fabric / Kubernetes / Mesos / Deis
 
 ---
 
