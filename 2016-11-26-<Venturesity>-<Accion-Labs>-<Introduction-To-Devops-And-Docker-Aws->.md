@@ -24,22 +24,30 @@ template: invert
 
 # I have no idea what I am talking about :stuck_out_tongue_winking_eye:
 
+
 ---
 
 # The dark days before DevOps
 
-* Developers, Testers & SysAdmins
+* Developers, Testers & SysAdmins Silos
 * Functionally Separated 
 * Blame Culture
 * Buggy Code
 * Insanely longer deployment process
+* Longer Feedback loops
 
+---
+
+![DevOps](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/2016-11-26/devops.png)
 
 ---
 
 # DevOps
 
-![DevOps](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/2016-11-26/devops.png "DevOps")
+- Collaboration
+- Automated
+- Shorter feedback loops
+- Agile
 
 ---
 
@@ -50,26 +58,74 @@ template: invert
 
 # DevOps Toolchain
 
-1. **Code** – Code development and review, Version control tools, code merging
-1. **Build** – continuous integration tools, build status
-1. **Test** – Test and results determine performance
-1. **Package** – Artifact repository, application pre-deployment staging
-1. **Release** – Change management, release approvals, release automation
-1. **Configure** – Infrastructure configuration and management, Infrastructure as Code tools
-1. **Monitor** – Applications performance monitoring, end user experience
+- Code 
+- Build 
+- Test 
+- Package 
+- Release 
+- Configure
+- Monitor
+
+---
+
+# Code 
+
+Code development and review, Version control tools, code merging
+
+- GitHub / BitBucket / GitLab
+- Issus / JIRA / BugZilla
+- Waffle / Tagia
+
+---
+
+![DevOps](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/2016-11-26/git-model.png)
+
+---
+
+# Build, Test, Package
+
+Continuous integration tools, build status. 
+
+Test and results determine performance. 
+
+Artifact repository, application pre-deployment staging
+
+- Jenkins
+- Drone
+- Travis
+- CircleCI
+
+---
+
+# Release, Configure 
+
+Change management, release approvals, release automation
+
+Infrastructure configuration and management, Infrastructure as Code tools
+
+- Chef / Puppet / Fabric / Kubernetes / Mesos / 
+
+---
+
+# Monitor – Applications performance monitoring, end user experience
+
+- New Reli
+- Sentry
+- DataDog
 
 ---
 
 # DevOps Engg. != SysAdmin
 
-* SysAdmins are people who manually deploy other people's code on a server, provided Devs provide them with dependencies. More often than not Code is a black box to them.
+* SysAdmins are people who manually deploy other people's code on a server, assuming devs provide them with dependencies & instructions. More often than not Code is a black box to them.
 * DevOps Engineers are either developers who get interested in deployment and network operations, or sysadmins who have a passion for scripting and coding, and move into the development side where they can improve the planning of test and deployment.
 
 ---
 
-# True Story
+# True Stories
 
-Building Device iOS and Android Device Farm @ Appknox
+- Building Device iOS and Android Device Farm @ Appknox
+- Stolen Code
 
 ---
 
@@ -79,22 +135,27 @@ Building Device iOS and Android Device Farm @ Appknox
 
 # 12 Factor App
 
-I. **Codebase** - One codebase tracked in revision control, many deploys
-II. **Dependencies** - Explicitly declare and isolate dependencies
-III. **Config** - Store config in the environment
-IV. **Backing services** - Treat backing services as attached resources
-V. **Build, release, run** - Strictly separate build and run stages
-VI. **Processes** - Execute the app as one or more stateless processes
+- **Codebase** - One codebase tracked in revision control, many deploys
+- **Dependencies** - Explicitly declare and isolate dependencies
+- **Config** - Store config in the environment
+- **Backing services** - Treat backing services as attached resources
 
 ---
+
 # ..contd
 
-VII. **Port binding** - Export services via port binding
-VIII. **Concurrency** - Scale out via the process model
-IX. **Disposability** - Maximize robustness with fast startup and graceful shutdown
-X. **Dev/prod parity** - Keep development, staging, and production as similar as possible
-XI. **Logs** - Treat logs as event streams
-XII. **Admin processes** - Run admin/management tasks as one-off processes
+- **Build, release, run** - Strictly separate build and run stages
+- **Processes** - Execute the app as one or more stateless processes
+- **Port binding** - Export services via port binding
+- **Concurrency** - Scale out via the process model
+
+---
+
+# ..contd
+- **Disposability** - Maximize robustness with fast startup and graceful shutdown
+- **Dev/prod parity** - Keep development, staging, and production as similar as possible
+- **Logs** - Treat logs as event streams
+- **Admin processes** - Run admin/management tasks as one-off processes
 
 ---
 
