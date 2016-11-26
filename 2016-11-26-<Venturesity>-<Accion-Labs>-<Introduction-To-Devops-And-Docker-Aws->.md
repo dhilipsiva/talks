@@ -115,6 +115,10 @@ Infrastructure configuration and management, Infrastructure as Code tools
 
 - Chef / Puppet / Fabric / Kubernetes / Mesos / Deis
 
+- Deployment & Rollback Strategies:
+	- Blue / Green
+	- Rolling Upgrade
+
 ---
 
 # Monitor – Applications performance monitoring, end user experience
@@ -178,7 +182,7 @@ Do no re-invent the wheel (DRY). Lets use a slide that has been battle tested mu
 # AWS Demo
 
 - Free Tier
-- Login without `pem` file
+- Login without `.pem` file
 - Manually - setup server
 - Write simple deploy script
 - Deploy with Docker
