@@ -49,7 +49,7 @@ Django, Postgres, RabbitMQ, Celery, Redis, Memcached, Nginx, Ember, NodeJS, Kube
 
 ---
 
-![Appknox Atchitecture](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/2016-12-17/architecture-at-appknox.jpg.png)
+![Appknox Atchitecture](https://raw.githubusercontent.com/dhilipsiva/talks/master/assets/2016-12-17/architecture-at-appknox.jpg)
 
 ---
 
