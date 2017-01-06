@@ -11,7 +11,7 @@ template: invert
 
 ---
 
-- Tech Lead, Full-Stack & DevOps - @Appknox
+- Tech Lead, Full-Stack & DevOps - [@Appknox](https://twitter.com/appknox)
 - I code for Web, Mobile, Embedded & IoT. Open-Source Fanatic. Big Data & Machine Learning Enthusiast. Dad. Atheist
 - So primarily a Developer + little bit of this & that
 - Jack of all trades & Master of none
