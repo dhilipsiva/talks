@@ -59,6 +59,8 @@ Django, Postgres, RabbitMQ, Celery, Redis, Memcached, Nginx, Ember, NodeJS, Kube
 
 # Our deployment process
 
+## Deis
+
 ---
 
 # Thanks! :pray:
