@@ -40,7 +40,7 @@ template: invert
 * [His Course on ML](https://www.coursera.org/learn/machine-learning) is the goto course for Getting Started
 * Formerly a Professor at Stanford University
 * Chief Scientist at Baidu Research
-* Co-Founder of Coursera 
+* Co-Founder of Coursera
 
 ---
 
@@ -128,7 +128,7 @@ Copyright &copy; 2016 [dhilipsiva](https://github.com/dhilipsiva)
 This copy is released under the [MIT License](https://github.com/dhilipsiva/talks/blob/master/LICENSE)
 
 [Source Code](https://github.com/dhilipsiva/talks/blob/master/2017-01-07-<BangML>-<Meetup-1>-<The-Path-To-Becoming-An-ML-Expert>.md)
-[SlideShare Link](http://www.slideshare.net/dhilipsiva/slide)
+[SlideShare Link](http://www.slideshare.net/dhilipsiva/bangml-meetup-1-the-path-to-becoming-an-machine-learning-expert)
 
 # Questions:question:
 [http://dhilipsiva.com](http://dhilipsiva.com)
