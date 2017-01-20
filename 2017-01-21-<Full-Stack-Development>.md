@@ -125,7 +125,7 @@ Copyright &copy; 2016 [dhilipsiva](https://github.com/dhilipsiva)
 This copy is released under the [MIT License](https://github.com/dhilipsiva/talks/blob/master/LICENSE)
 
 [Source Code](https://github.com/dhilipsiva/talks/blob/master/2017-01-21-<Full-Stack-Development>.md)
-[SlideShare Link](http://www.slideshare.net/dhilipsiva/slide)
+[SlideShare Link](http://www.slideshare.net/dhilipsiva/fullstack-development)
 
 # Questions:question:
 [http://dhilipsiva.com](http://dhilipsiva.com)
