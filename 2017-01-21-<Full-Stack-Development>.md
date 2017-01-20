@@ -38,7 +38,7 @@ Both Web & Mobile
 
 # You are almost right...
 
-Someone who is capable on working on all the layers of the Stack 
+Someone who is capable on working on all the layers of the Stack
 * Understand Requirements
 * Plan & Architect
 * Write Code (Backend + Frontend / Mobile)
@@ -61,7 +61,7 @@ Someone who is capable on working on all the layers of the Stack
 | **Team Suitable** | Smaller | Larger |
 | **0 to market** | :rabbit: | :turtle: |
 | **Scaling** | :-1: | :+1: |
-| **Company** | Nacent / Smaller startups | bigger startups / corporates |
+| **Company** | Nascent / Smaller startups | bigger startups / corporates |
 | **Fun/Better** | Depends | Depends |
 
 ---
@@ -81,7 +81,7 @@ Lets analyze data from these places:
 # How to Keepup?
 
 * Read Other people's code
-* Spend 1 / 2 hours for lokking at job descriptions of different companies
+* Spend 1 / 2 hours for looking at job descriptions of different companies
 * Contribute to open source
 
 ---
@@ -96,7 +96,7 @@ Lets analyze data from these places:
 # Lets discuss about some Tech
 
 * Language: JavaScript, Java, Python, PHP, Ruby, C/C++, ObjC/Swift, Go, Erlang
-* Framework: [Python](https://stackoverflow.com/questions/13941903/when-to-use-tornado-when-to-use-twisted-cyclone-gevent-other/16630916#16630916), Node, OTP, Rails, 
+* Framework: [Python](https://stackoverflow.com/questions/13941903/when-to-use-tornado-when-to-use-twisted-cyclone-gevent-other/16630916#16630916), Node, OTP, Rails,
 * DB: MariaDB(MySQL), Postgres, MS SQL, MongoDB (Or NoSQL), ElasticSearch (Or Lucene & Solr), Neo4J, Titan, Oracle
 * Queus/PubSub: RabbitMQ, Redis
 * PAAS: Heroku, beanStalk, Joyent, [Dokku, Deis](http://dhilipsiva.com/open-source-paas/)
