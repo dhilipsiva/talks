@@ -15,6 +15,7 @@ template: invert
 - I code for Web, Mobile, Embedded & IoT. Open-Source Fanatic. Big Data & Machine Learning Enthusiast. Dad. Atheist
 - So primarily a Developer + little bit of this & that
 - Jack of all trades & Master of none
+- No, I do not keep Bindi for religious reasons. Its for a scientific reason & a fashion statement.
 - [http://dhilipsiva.com](http://dhilipsiva.com)
 - [dhilipsiva@gmail.com](mailto:dhilipsiva@gmail.com)
 
