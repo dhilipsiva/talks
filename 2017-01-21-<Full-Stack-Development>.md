@@ -96,11 +96,11 @@ Lets analyze data from these places:
 # Lets discuss about some Tech
 
 * Language: JavaScript, Java, Python, PHP, Ruby, C/C++, ObjC/Swift, Go, Erlang
-* Framework: [Python](https://stackoverflow.com/questions/13941903/when-to-use-tornado-when-to-use-twisted-cyclone-gevent-other/16630916#16630916), Node, OTP, Rails,
+* Framework: FE:{Ember, Angular, Backbone, React, ...}, BE: {[Python](https://stackoverflow.com/questions/13941903/when-to-use-tornado-when-to-use-twisted-cyclone-gevent-other/16630916#16630916), Node, OTP, Rails ...}
 * DB: MariaDB(MySQL), Postgres, MS SQL, MongoDB (Or NoSQL), ElasticSearch (Or Lucene & Solr), Neo4J, Titan, Oracle
 * Queus/PubSub: RabbitMQ, Redis
 * PAAS: Heroku, beanStalk, Joyent, [Dokku, Deis](http://dhilipsiva.com/open-source-paas/)
-* IAAS: AWS, Google Cloud, Azure, Digital Ocean, Linode
+* IAAS: AWS, Google Cloud, Azure, Digital Ocean
 
 ---
 
