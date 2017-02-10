@@ -90,29 +90,87 @@ fw.close()  # Close the file
 ```py
 import xlsxwriter
 
-workbook = xlsxwriter.Workbook('demo.xlsx')  # Create an new Excel file and add a worksheet.
+workbook = xlsxwriter.Workbook('demo.xlsx') 
 worksheet = workbook.add_worksheet()
-worksheet.set_column('A:A', 20)  # Widen the first column to make the text clearer.
-bold = workbook.add_format({'bold': True})  # Add a bold format to use to highlight cells.
-worksheet.write('A1', 'Hello')  # Write some simple text.
-worksheet.write('A2', 'World', bold)  # Text with formatting.
-worksheet.write(2, 0, 123)  # Write some numbers, with row/column notation.
+worksheet.set_column('A:A', 20) 
+bold = workbook.add_format({'bold': True}) 
+worksheet.write('A1', 'Hello')  
+worksheet.write('A2', 'World', bold) 
+worksheet.write(2, 0, 123) 
 worksheet.write(3, 0, 123.456)
-worksheet.insert_image('B5', 'logo.png')  # Insert an image.
+worksheet.insert_image('B5', 'logo.png')
 workbook.close()
 ```
 
 ---
 
+## Image
+
+```py
+from PIL import ImageFilter
+size = (128, 128)
+from PIL import Image
+im = Image.open("lena.ppm")
+print(im.format, im.size, im.mode)
+im.show()
+im.thumbnail(size)
+box = (100, 100, 400, 400)
+region = im.crop(box)
+region = region.transpose(Image.ROTATE_180)
+out = im.resize((128, 128))
+out = im.rotate(45)
+out = im.transpose(Image.FLIP_LEFT_RIGHT)
+out = im.filter(ImageFilter.DETAIL)
+```
+---
+
 ## Audio
+
+```py
+from pydub import AudioSegment
+song = AudioSegment.from_wav("trance.wav")
+ten_seconds = 10 * 1000
+first_10_seconds = song[ten_seconds:ten_seconds*2]
+last_5_seconds = song[-5000:]
+beginning = first_10_seconds + 6
+end = last_5_seconds - 3
+backwards = beginning.reverse()
+with_style = beginning.append(end, crossfade=1500)
+with_style = with_style.append(backwards, crossfade=1500)
+do_it_over = with_style * 2
+awesome = do_it_over.fade_in(2000).fade_out(3000)
+awesome.export("mashup.wav", format="wav")
+```
+
+---
+
+## Video
+```
+from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip
+clip = VideoFileClip("baby-cry.webm")
+clip = clip.volumex(0.8)
+txt_clip = TextClip("Baby Cry", fontsize=70, color='white')
+txt_clip = txt_clip.set_pos('center').set_duration(3)
+video = CompositeVideoClip([clip, txt_clip])
+video.write_videofile("baby-cry-text.webm")
+```
 
 ---
 
 # Classes and Objects
 
+* Abstraction
+* Polymorphism
+* Encapsulation
+* Inheritance
+
+\_\_init__, super, \_\_str__, \_\_len__
+
 ---
 
 # CLI Applications
+
+Lets build a simple game, shall we?
 
 ---
 
