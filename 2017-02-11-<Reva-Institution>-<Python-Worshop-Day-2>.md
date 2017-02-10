@@ -9,6 +9,14 @@ template: invert
 
 ## [@dhilipsiva](https://github.com/dhilipsiva)
 
+--- 
+
+# Requirements
+
+```
+pip install xlsxwriter pydub pillow moviepy 
+```
+
 ---
 
 - Tech Lead, Full-Stack & DevOps - [@Appknox](https://twitter.com/appknox)
@@ -48,11 +56,55 @@ More: https://github.com/ChillarAnand/python-101/blob/master/manuscript.md
 
 * Files (Text, [Excel](https://github.com/jmcnamara/XlsxWriter), [Audio](http://pydub.com/), [Image](https://python-pillow.org/), [Video](https://github.com/Zulko/moviepy))
 * Classes & Objects
-* CLI Applicattion (Lets build a simple game)
+* CLI Application (Let's build a simple game)
 
 ---
 
 # Files
+
+```py
+fr = open("file.txt")  # Open a file to read
+fr.read()  # Will read entire content
+fr.readline()  # Reads line by line
+fr.readlines()  # Reads the entire files and return a list
+fr.close()  # Close the file
+
+fw = open("file.txt", "w")  # Open a file to write
+fw.write("Foo Bar")  # Write a single line
+fw.writelines(["One", "Two"])  # Write a list of lines
+fw.close()  # Close the file 
+
+# Also explain append mode
+```
+---
+
+## Excercises
+
+1. Copy content of one file into another file
+2. Remove the lines in a file which has the text `foo`
+
+---
+
+## Excel Sheet
+
+```py
+import xlsxwriter
+
+workbook = xlsxwriter.Workbook('demo.xlsx')  # Create an new Excel file and add a worksheet.
+worksheet = workbook.add_worksheet()
+worksheet.set_column('A:A', 20)  # Widen the first column to make the text clearer.
+bold = workbook.add_format({'bold': True})  # Add a bold format to use to highlight cells.
+worksheet.write('A1', 'Hello')  # Write some simple text.
+worksheet.write('A2', 'World', bold)  # Text with formatting.
+worksheet.write(2, 0, 123)  # Write some numbers, with row/column notation.
+worksheet.write(3, 0, 123.456)
+worksheet.insert_image('B5', 'logo.png')  # Insert an image.
+workbook.close()
+```
+
+---
+
+## Audio
 
 ---
 
@@ -67,8 +119,6 @@ More: https://github.com/ChillarAnand/python-101/blob/master/manuscript.md
 # Thanks! :pray:
 
 ### https://github.com/dhilipsiva/talks
-
-Copyright &copy; 2016 [dhilipsiva](https://github.com/dhilipsiva)
 
 This copy is released under the [MIT License](https://github.com/dhilipsiva/talks/blob/master/LICENSE)
 

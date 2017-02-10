@@ -38,12 +38,10 @@ template: invert
 
 ### https://github.com/dhilipsiva/talks
 
-Copyright &copy; 2016 [dhilipsiva](https://github.com/dhilipsiva)
-
 This copy is released under the [MIT License](https://github.com/dhilipsiva/talks/blob/master/LICENSE)
 
 [Source Code](https://github.com/dhilipsiva/talks/blob/master/%(file_name)s)
-[SlideShare Link](http://www.slideshare.net/dhilipsiva/slide)
+[SlideShare Link](http://www.slideshare.net/dhilipsiva)
 
 # Questions:question:
 [http://dhilipsiva.com](http://dhilipsiva.com)
