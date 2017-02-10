@@ -9,7 +9,7 @@ template: invert
 
 ## [@dhilipsiva](https://github.com/dhilipsiva)
 
---- 
+---
 
 # Requirements
 
@@ -72,7 +72,7 @@ fr.close()  # Close the file
 fw = open("file.txt", "w")  # Open a file to write
 fw.write("Foo Bar")  # Write a single line
 fw.writelines(["One", "Two"])  # Write a list of lines
-fw.close()  # Close the file 
+fw.close()  # Close the file
 
 # Also explain append mode
 ```
@@ -90,13 +90,13 @@ fw.close()  # Close the file
 ```py
 import xlsxwriter
 
-workbook = xlsxwriter.Workbook('demo.xlsx') 
+workbook = xlsxwriter.Workbook('demo.xlsx')
 worksheet = workbook.add_worksheet()
-worksheet.set_column('A:A', 20) 
-bold = workbook.add_format({'bold': True}) 
-worksheet.write('A1', 'Hello')  
-worksheet.write('A2', 'World', bold) 
-worksheet.write(2, 0, 123) 
+worksheet.set_column('A:A', 20)
+bold = workbook.add_format({'bold': True})
+worksheet.write('A1', 'Hello')
+worksheet.write('A2', 'World', bold)
+worksheet.write(2, 0, 123)
 worksheet.write(3, 0, 123.456)
 worksheet.insert_image('B5', 'logo.png')
 workbook.close()
@@ -181,7 +181,7 @@ Lets build a simple game, shall we?
 This copy is released under the [MIT License](https://github.com/dhilipsiva/talks/blob/master/LICENSE)
 
 [Source Code](https://github.com/dhilipsiva/talks/blob/master/2017-02-11-<Reva-Institution>-<Python-Worshop-Day-2>.md)
-[SlideShare Link](http://www.slideshare.net/dhilipsiva/slide)
+[SlideShare Link](http://www.slideshare.net/dhilipsiva/python-workshop-day-2-reva-university)
 
 # Questions:question:
 [http://dhilipsiva.com](http://dhilipsiva.com)
