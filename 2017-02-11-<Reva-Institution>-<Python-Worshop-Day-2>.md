@@ -14,7 +14,7 @@ template: invert
 # Requirements
 
 ```
-pip install xlsxwriter pydub pillow moviepy 
+pip install xlsxwriter pydub pillow moviepy requests
 ```
 
 ---
