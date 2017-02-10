@@ -145,7 +145,7 @@ awesome.export("mashup.wav", format="wav")
 ---
 
 ## Video
-```
+```py
 from moviepy.editor import VideoFileClip, TextClip, CompositeVideoClip
 clip = VideoFileClip("baby-cry.webm")
 clip = clip.volumex(0.8)
