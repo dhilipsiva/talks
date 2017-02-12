@@ -1,0 +1,24 @@
+Animal
+	limbs
+	ears
+	eyes
+	facial_hair
+	head
+	body
+
+Cat extends Animal
+	tail
+
+Person extends Animal
+	name
+    address
+	gender
+	DOB
+	phone number
+	email id
+	occupation
+
+Trainer extends Person
+	company
+	experience
+	salary

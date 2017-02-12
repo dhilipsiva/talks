@@ -13,17 +13,17 @@ Date created: 2017-02-10
 """
 
 from PIL import ImageFilter
-# size = (128, 128)
 from PIL import Image
+size = (128, 128)
 im = Image.open("corgi.jpg")
-print(im.format, im.size, im.mode)
-# im.show()
+# print(im.format, im.size, im.mode)
 # im.thumbnail(size)
+# im.show()
 box = (1400, 500, 2000, 1000)
 region = im.crop(box)
-# region = region.transpose(Image.ROTATE_180)
-region = region.transpose(Image.FLIP_LEFT_RIGHT)
-region.resize((128, 128))
+region = region.transpose(Image.ROTATE_90)
+# region = region.transpose(Image.FLIP_LEFT_RIGHT)
+# region.resize((128, 128))
 # region = region.filter(ImageFilter.DETAIL)
 region = region.filter(ImageFilter.BLUR)
 region.show()
