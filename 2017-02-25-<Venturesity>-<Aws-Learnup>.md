@@ -33,10 +33,6 @@ template: invert
 
 ---
 
-# [https://goo.gl/f7l7Ie](https://goo.gl/f7l7Ie)
-
----
-
 # How to build/buy a PC/Laptop?
 
 ### [Sample](http://dhilipsiva.com/2014/05/20/my-dream-gaming-machine.html)
@@ -49,7 +45,7 @@ template: invert
 
 # AWS is a place where you ~~buy~~ rent a ~~PC~~ Virtual Machines and Accessories
 
---- 
+---
 
 # Why AWS?
 * Cheaper
@@ -86,8 +82,8 @@ template: invert
 # Beanstalk
 
 * Heroku, anyone?
-* Developer's Friend. 
-* Run your infra with 0 ops guy army. :stuck_out_tongue: 
+* Developer's Friend.
+* Run your infra with 0 ops guy army. :stuck_out_tongue:
 ```
     $ mkdir HelloWorld
     $ cd HelloWorld
@@ -155,7 +151,7 @@ template: invert
 # Cloud Watch
 
 * Metrics
-* Alarms 
+* Alarms
 * Events
 * Logs
 
@@ -187,7 +183,7 @@ template: invert
 
 * Groups
 * Users
-* Roles 
+* Roles
 * Policy
 * 2FA is important (TeaClix Example)
 
@@ -252,7 +248,7 @@ template: invert
 ---
 
 # Productivity Apps
-* WorkDocs 
+* WorkDocs
 * WorkMail
 * AppStream
 * WorSpaces
