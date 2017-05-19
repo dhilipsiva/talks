@@ -1,48 +1,50 @@
-class SillyDict(object):
+class SillyHashDict(object):
     """
-    This is the silliest pure-python dict that you can ever write
+    This is the silliest pure-python hash dict that you can ever write
     """
-    def __init__(self):
+    def __init__(self, max_len=10):
         """
         Initialie internal data sctructure
         """
-        super(SillyDict, self).__init__()
-        self._keys = []
-        self._vals = []
+        super(SillyHashDict, self).__init__()
+        self.max_len = max_len
+        self._items = [None] * self.max_len
 
-    def __setitem__(self, key, val):
+    def _hash(self, key):
         """
-        Set an Iterm
+        Calculate Hash
+        + Compressor function
+        # sum([ord(i) for i in a])
         """
-        if key in self._keys:
-            idx = self._keys.index(key)
-            self._vals[idx] = val
-        else:
-            self._keys.append(key)
-            self._vals.append(val)
+        return len(key) % self.max_len  # Here, '%' is the compressor function
 
     def __getitem__(self, key):
         """
         Get an Item
         """
-        try:
-            idx = self._keys.index(key)
-            return self._vals[idx]
-        except ValueError:
+        idx = self._hash(key)
+        item = self._items[idx]
+        if item is None:
             raise KeyError(key)
+        return item[2]
+
+    def __setitem__(self, key, val):
+        """
+        Set an Iterm
+        """
+        idx = self._hash(key)
+        self._items[idx] = (idx, key, val)
 
     def pop(self, key):
         """
         Remove and return the value for a key
         """
-        try:
-            idx = self._keys.index(key)
-            del self._keys[idx]
-            val = self._vals[idx]
-            del self._vals[idx]
-            return val
-        except ValueError:
+        idx = self._hash(key)
+        item = self._items[idx]
+        self._items[idx] = None
+        if item is None:
             raise KeyError(key)
+        return item[2]
 
     def __delitem__(self, key):
         """
@@ -54,44 +56,40 @@ class SillyDict(object):
         """
         Check if a key is in the dictionary
         """
-        key in self._keys
+        idx = self._hash(key)
+        item = self._items[idx]
+        return item is not None
 
     def keys(self):
         """
         Return a list of keys in the dictionary
         """
-        return self._keys
+        return [item[1] for item in self.items if item is not None]
 
     def values(self):
         """
         Return a list of values in the dictionary
         """
-        return self._vals
-
-    def _items(self):
-        """
-        Return Zipped keys and vals
-        """
-        return zip(self._keys, self._vals)
+        return [item[2] for item in self.items if item is not None]
 
     def items(self):
         """
         Return a list of key-value pairs
         """
-        return self._items()
+        return [(item[1], item[2]) for item in self._items if item is not None]
 
     def clear(self):
         """
         Clear the dictionary of all data
         """
         self._keys = []
-        self._vals = []
+        self._items = []
 
     def __iter__(self):
         """
         Just an Itrator ovet things
         """
-        return self._items()
+        return self.items()
 
     def iterkeys(self):
         """
@@ -124,11 +122,11 @@ class SillyDict(object):
         """
         Len of dict
         """
-        return len(self._keys)
+        return len(self._items)
 
     def __repr__(self):
         """
         Representation on this SillyDict
         """
         r = ["{0!r} : {1!r}".format(k, v) for k, v in self.iteritems()]
-        return "SillyDict({" + ", ".join(r) + "})"
+        return "SillyHashDict({" + ", ".join(r) + "})"
