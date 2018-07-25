@@ -11,11 +11,12 @@ template: invert
 
 ---
 
-- Tech Lead, Full-Stack & DevOps - [@Appknox](https://twitter.com/appknox)
-- I code for Web, Mobile, Embedded & IoT. Open-Source Fanatic. Big Data & Machine Learning Enthusiast. Dad. Atheist
-- So primarily a Developer + little bit of this & that
+- Optimistic Nihilist.
+- Wannabe Astrophysicist.
+- I code for fun & profit.
+- I love Science, Python, FOSS & fitness.
+- Dad of 2. Environmentalist. Story Teller. Gamer.
 - Jack of all trades & Master of none
-- No, I do not keep Bindi for religious reasons. Its for a scientific reason & a fashion statement.
 - [http://dhilipsiva.com](http://dhilipsiva.com)
 - [dhilipsiva@gmail.com](mailto:dhilipsiva@gmail.com)
 
@@ -40,7 +41,7 @@ template: invert
 
 This copy is released under the [MIT License](https://github.com/dhilipsiva/talks/blob/master/LICENSE)
 
-[Source Code](https://github.com/dhilipsiva/talks/blob/master/%(file_name)s)
+[Source Code](https://github.com/dhilipsiva/talks/blob/master/2018-07-25-<Garuda-Automagically-Exposing-Djagno-Orm-Over-Grpc-For-Microservices-Written-In-Any-Other-Languages->.md)
 [SlideShare Link](http://www.slideshare.net/dhilipsiva)
 
 # Questions:question:
