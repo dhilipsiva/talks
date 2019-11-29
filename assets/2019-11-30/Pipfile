@@ -1,0 +1,19 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+ipython = "*"
+neovim = "*"
+ipdb = "*"
+
+[packages]
+flask = "*"
+grpcio = "*"
+grpcio-tools = "*"
+invoke = "*"
+requests = "*"
+
+[requires]
+python_version = "3.7"
