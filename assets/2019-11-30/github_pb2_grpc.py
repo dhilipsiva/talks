@@ -182,8 +182,8 @@ class CodeDBStub(object):
     Args:
       channel: A grpc.Channel.
     """
-    self.getCodeData = channel.unary_unary(
-        '/CodeDB/getCodeData',
+    self.GetCodeData = channel.unary_unary(
+        '/CodeDB/GetCodeData',
         request_serializer=github__pb2.Request.SerializeToString,
         response_deserializer=github__pb2.Reply.FromString,
         )
@@ -193,7 +193,7 @@ class CodeDBServicer(object):
   # missing associated documentation comment in .proto file
   pass
 
-  def getCodeData(self, request, context):
+  def GetCodeData(self, request, context):
     # missing associated documentation comment in .proto file
     pass
     context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -203,8 +203,8 @@ class CodeDBServicer(object):
 
 def add_CodeDBServicer_to_server(servicer, server):
   rpc_method_handlers = {
-      'getCodeData': grpc.unary_unary_rpc_method_handler(
-          servicer.getCodeData,
+      'GetCodeData': grpc.unary_unary_rpc_method_handler(
+          servicer.GetCodeData,
           request_deserializer=github__pb2.Request.FromString,
           response_serializer=github__pb2.Reply.SerializeToString,
       ),

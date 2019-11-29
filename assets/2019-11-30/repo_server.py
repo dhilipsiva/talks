@@ -6,29 +6,24 @@ from grpc_opentracing import open_tracing_server_interceptor
 
 from github_pb2 import Reply
 from utils import get_config, wait_for_termination
-from github_pb2_grpc import AccountServicer, add_AccountServicer_to_server
-
-# from gist_client import gist_stub
-# from github_pb2 import Request
+from github_pb2_grpc import RepoServicer, add_RepoServicer_to_server
 
 
-class Account(AccountServicer):
+class Repo(RepoServicer):
 
-    def GetUserName(self, request, context):
-        # response = gist_stub.GetPublicGist(Request(request_id='foo'))
-        # print("Greeter client received: " + response.msg)
-        return Reply(msg='account')
+    def GetLatestCommit(self, request, context):
+        return Reply(msg='repo')
 
 
 def serve():
-    config = get_config('account-server')
+    config = get_config('repo-server')
     tracer = config.initialize_tracer()
     tracer_interceptor = open_tracing_server_interceptor(
         tracer, log_payloads=True)
     server = grpc.server(ThreadPoolExecutor(max_workers=10))
     server = intercept_server(server, tracer_interceptor)
-    add_AccountServicer_to_server(Account(), server)
-    server.add_insecure_port('[::]:50051')
+    add_RepoServicer_to_server(Repo(), server)
+    server.add_insecure_port('[::]:50055')
     server.start()
     wait_for_termination()
     server.stop(0)

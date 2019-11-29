@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0cgithub.proto\"\x1d\n\x07Request\x12\x12\n\nrequest_id\x18\x01 \x01(\t\"\x14\n\x05Reply\x12\x0b\n\x03msg\x18\x01 \x01(\t2,\n\x07\x41\x63\x63ount\x12!\n\x0bGetUserName\x12\x08.Request\x1a\x06.Reply\"\x00\x32+\n\x04Gist\x12#\n\rGetPublicGist\x12\x08.Request\x1a\x06.Reply\"\x00\x32-\n\x04Repo\x12%\n\x0fGetLatestCommit\x12\x08.Request\x1a\x06.Reply\"\x00\x32/\n\x08\x43ommonDB\x12#\n\rGetCommonData\x12\x08.Request\x1a\x06.Reply\"\x00\x32+\n\x06\x43odeDB\x12!\n\x0bgetCodeData\x12\x08.Request\x1a\x06.Reply\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0cgithub.proto\"\x1d\n\x07Request\x12\x12\n\nrequest_id\x18\x01 \x01(\t\"\x14\n\x05Reply\x12\x0b\n\x03msg\x18\x01 \x01(\t2,\n\x07\x41\x63\x63ount\x12!\n\x0bGetUserName\x12\x08.Request\x1a\x06.Reply\"\x00\x32+\n\x04Gist\x12#\n\rGetPublicGist\x12\x08.Request\x1a\x06.Reply\"\x00\x32-\n\x04Repo\x12%\n\x0fGetLatestCommit\x12\x08.Request\x1a\x06.Reply\"\x00\x32/\n\x08\x43ommonDB\x12#\n\rGetCommonData\x12\x08.Request\x1a\x06.Reply\"\x00\x32+\n\x06\x43odeDB\x12!\n\x0bGetCodeData\x12\x08.Request\x1a\x06.Reply\"\x00\x62\x06proto3')
 )
 
 
@@ -213,8 +213,8 @@ _CODEDB = _descriptor.ServiceDescriptor(
   serialized_end=299,
   methods=[
   _descriptor.MethodDescriptor(
-    name='getCodeData',
-    full_name='CodeDB.getCodeData',
+    name='GetCodeData',
+    full_name='CodeDB.GetCodeData',
     index=0,
     containing_service=None,
     input_type=_REQUEST,

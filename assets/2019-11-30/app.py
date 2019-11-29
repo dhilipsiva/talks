@@ -1,8 +1,9 @@
 from flask import Flask, request
 from flask_opentracing import FlaskTracer
 
-from pinger_pb2 import Request
-from utils import get_random_stub, tracer
+from utils import get_config
+from github_pb2 import Request
+from account_client import account_stub
 
 app = Flask(__name__)
 
@@ -14,14 +15,14 @@ def index():
 
 @app.route("/ping")
 def ping():
-    stub = get_random_stub()
     request_id = request.args.get('request_id')
-    reply = stub.Ping(Request(request_id=request_id))
+    reply = account_stub.GetUserName(Request(request_id=request_id))
     return reply.msg
 
 
 def initialize_tracer():
-    return tracer
+    config = get_config('api')
+    return config.initialize_tracer()
 
 
 flask_tracer = FlaskTracer(initialize_tracer, True, app)

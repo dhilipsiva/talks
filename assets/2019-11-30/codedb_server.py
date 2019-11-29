@@ -6,29 +6,24 @@ from grpc_opentracing import open_tracing_server_interceptor
 
 from github_pb2 import Reply
 from utils import get_config, wait_for_termination
-from github_pb2_grpc import AccountServicer, add_AccountServicer_to_server
-
-# from gist_client import gist_stub
-# from github_pb2 import Request
+from github_pb2_grpc import CodeDBServicer, add_CodeDBServicer_to_server
 
 
-class Account(AccountServicer):
+class CodeDB(CodeDBServicer):
 
-    def GetUserName(self, request, context):
-        # response = gist_stub.GetPublicGist(Request(request_id='foo'))
-        # print("Greeter client received: " + response.msg)
-        return Reply(msg='account')
+    def GetCodeData(self, request, context):
+        return Reply(msg='codedb')
 
 
 def serve():
-    config = get_config('account-server')
+    config = get_config('codedb-server')
     tracer = config.initialize_tracer()
     tracer_interceptor = open_tracing_server_interceptor(
         tracer, log_payloads=True)
     server = grpc.server(ThreadPoolExecutor(max_workers=10))
     server = intercept_server(server, tracer_interceptor)
-    add_AccountServicer_to_server(Account(), server)
-    server.add_insecure_port('[::]:50051')
+    add_CodeDBServicer_to_server(CodeDB(), server)
+    server.add_insecure_port('[::]:50052')
     server.start()
     wait_for_termination()
     server.stop(0)

@@ -25,5 +25,5 @@ service CommonDB {
 }
 
 service CodeDB {
-  rpc getCodeData(Request) returns (Reply) {}
+  rpc GetCodeData(Request) returns (Reply) {}
 }
