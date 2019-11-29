@@ -12,6 +12,7 @@ from github_pb2_grpc import AccountServicer, add_AccountServicer_to_server
 class Account(AccountServicer):
 
     def GetUserName(self, request, context):
+        print(request, context)
         return Reply(msg='account')
 
 

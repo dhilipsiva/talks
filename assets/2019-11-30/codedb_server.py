@@ -12,6 +12,7 @@ from github_pb2_grpc import CodeDBServicer, add_CodeDBServicer_to_server
 class CodeDB(CodeDBServicer):
 
     def GetCodeData(self, request, context):
+        print(request, context)
         return Reply(msg='codedb')
 
 

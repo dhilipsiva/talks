@@ -12,6 +12,7 @@ from github_pb2_grpc import CommonDBServicer, add_CommonDBServicer_to_server
 class CommonDB(CommonDBServicer):
 
     def GetCommonData(self, request, context):
+        print(request, context)
         return Reply(msg='commondb')
 
 

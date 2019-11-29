@@ -13,6 +13,7 @@ from codedb_client import codedb_stub
 class Repo(RepoServicer):
 
     def GetLatestCommit(self, request, context):
+        print(request, context)
         codedb_stub.GetCodeData(request)
         return Reply(msg='repo')
 
