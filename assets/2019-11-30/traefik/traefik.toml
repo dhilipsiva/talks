@@ -28,3 +28,7 @@ dashboard = true
   # http should be redirected to https
   [entryPoints.http]
   address = ":80"
+
+[tracing]
+  [tracing.jaeger]
+    localAgentHostPort = "jaeger:6831"
