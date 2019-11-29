@@ -1,5 +1,9 @@
 import requests
 from invoke import task
+import opentelemetry.ext.http_requests
+from opentelemetry.trace import tracer
+
+opentelemetry.ext.http_requests.enable(tracer())
 
 
 @task
