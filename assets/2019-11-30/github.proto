@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+message Request {
+  string request_id = 1;
+}
+
+message Reply {
+  string msg = 1;
+}
+
+service Account {
+  rpc GetUserName (Request) returns (Reply) {}
+}
+
+service Gist {
+  rpc GetPublicGist (Request) returns (Reply) {}
+}
+
+service Repo {
+  rpc GetLatestCommit (Request) returns (Reply) {}
+}
+
+service CommonDB {
+  rpc GetCommonData(Request) returns (Reply) {}
+}
+
+service CodeDB {
+  rpc getCodeData(Request) returns (Reply) {}
+}
