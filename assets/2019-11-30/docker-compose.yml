@@ -1,0 +1,90 @@
+version: '3'
+
+services:
+
+  base: &base
+    env_file: .env
+    build: .
+    restart: always
+    command: python -m http.server
+
+  commondb:
+    <<: *base
+    command: python commondb_server.py
+    ports:
+      - 50053
+
+  codedb:
+    <<: *base
+    command: python codedb_server.py
+    ports:
+      - 50052
+
+  account:
+    <<: *base
+    command: python account_server.py
+    ports:
+      - 50051
+    depends_on:
+      - codedb
+      - commondb
+
+  repo:
+    <<: *base
+    command: python repo_server.py
+    ports:
+      - 50055
+    depends_on:
+      - codedb
+      - commondb
+
+  gist:
+    <<: *base
+    command: python gist_server.py
+    ports:
+      - 50054
+    depends_on:
+      - codedb
+      - commondb
+
+  api:
+    <<: *base
+    command: flask run
+    expose:
+      - 5000
+    labels:
+      - traefik.port=5000
+      - traefik.enable=true
+      - traefik.backend.domain=api.${VM_IP}.xip.io
+      - traefik.frontend.rule=Host:api.${VM_IP}.xip.io
+    depends_on:
+      - gist
+      - repo
+      - account
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.15
+    ports:
+      - 5775:5775/udp
+      - 6831:6831/udp
+      - 6832:6832/udp
+      - 5778:5778
+      - 16686:16686
+      - 14268:14268
+      - 9411:9411
+    expose:
+     - 16686
+    labels:
+      - traefik.port=16686
+      - traefik.enable=true
+      - traefik.backend.domain=jaeger.${VM_IP}.xip.io
+      - traefik.frontend.rule=Host:jaeger.${VM_IP}.xip.io
+
+  traefik:
+    env_file: .env
+    build: traefik
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 0.0.0.0:80:80
+      - 0.0.0.0:8080:8080

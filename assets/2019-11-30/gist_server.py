@@ -7,11 +7,13 @@ from grpc_opentracing import open_tracing_server_interceptor
 from github_pb2 import Reply
 from utils import get_config, wait_for_termination
 from github_pb2_grpc import GistServicer, add_GistServicer_to_server
+from codedb_client import codedb_stub
 
 
 class Gist(GistServicer):
 
     def GetPublicGist(self, request, context):
+        codedb_stub.GetCodeData(request)
         return Reply(msg='gist')
 
 

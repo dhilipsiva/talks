@@ -12,7 +12,7 @@ config = get_config('codedb-client')
 tracer = global_tracer()
 tracer_interceptor = open_tracing_client_interceptor(
     tracer, log_payloads=True)
-channel = insecure_channel('localhost:50052')
+channel = insecure_channel('codedb:50052')
 channel = intercept_channel(channel, tracer_interceptor)
 codedb_stub = CodeDBStub(channel)
 # response = codedb_stub.GetCodeData(Request(request_id='foo'))

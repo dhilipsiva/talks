@@ -12,7 +12,7 @@ config = get_config('commondb-client')
 tracer = global_tracer()
 tracer_interceptor = open_tracing_client_interceptor(
     tracer, log_payloads=True)
-channel = insecure_channel('localhost:50053')
+channel = insecure_channel('commondb:50053')
 channel = intercept_channel(channel, tracer_interceptor)
 commondb_stub = CommonDBStub(channel)
 # response = commondb_stub.GetCommonData(Request(request_id='foo'))

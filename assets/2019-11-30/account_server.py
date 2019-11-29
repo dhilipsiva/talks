@@ -8,15 +8,10 @@ from github_pb2 import Reply
 from utils import get_config, wait_for_termination
 from github_pb2_grpc import AccountServicer, add_AccountServicer_to_server
 
-# from gist_client import gist_stub
-# from github_pb2 import Request
-
 
 class Account(AccountServicer):
 
     def GetUserName(self, request, context):
-        # response = gist_stub.GetPublicGist(Request(request_id='foo'))
-        # print("Greeter client received: " + response.msg)
         return Reply(msg='account')
 
 

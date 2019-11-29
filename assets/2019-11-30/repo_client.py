@@ -12,7 +12,7 @@ config = get_config('repo-client')
 tracer = global_tracer()
 tracer_interceptor = open_tracing_client_interceptor(
     tracer, log_payloads=True)
-channel = insecure_channel('localhost:50055')
+channel = insecure_channel('repo:50055')
 channel = intercept_channel(channel, tracer_interceptor)
 repo_stub = RepoStub(channel)
 # response = repo_stub.GetLatestCommit(Request(request_id='foo'))

@@ -12,7 +12,7 @@ config = get_config('gist-client')
 tracer = global_tracer()
 tracer_interceptor = open_tracing_client_interceptor(
     tracer, log_payloads=True)
-channel = insecure_channel('localhost:50054')
+channel = insecure_channel('gist:50054')
 channel = intercept_channel(channel, tracer_interceptor)
 gist_stub = GistStub(channel)
 # response = gist_stub.GetPublicGist(Request(request_id='foo'))

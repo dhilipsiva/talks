@@ -1,0 +1,30 @@
+logLevel = "INFO"
+defaultEntryPoints = ["http"]
+
+[retry]
+
+[docker]
+exposedByDefault = false
+
+
+[Global]
+debug = true
+
+[log]
+level = "DEBUG"
+
+[accessLog]
+# format = "json"
+
+[api]
+# entryPoint = "traefik"
+# rule = "Host(`traefik.domain.com`)"
+dashboard = true
+
+[ping]
+
+# Entrypoints, http and https
+[entryPoints]
+  # http should be redirected to https
+  [entryPoints.http]
+  address = ":80"

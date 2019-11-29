@@ -12,7 +12,8 @@ def get_config(service_name):
                 'param': 1,
             },
             'local_agent': {
-                'reporting_host': '192.168.99.109',
+                # 'reporting_host': '192.168.99.109',
+                'reporting_host': 'jaeger',
                 'reporting_port': '6831',
             },
             'logging': True,
