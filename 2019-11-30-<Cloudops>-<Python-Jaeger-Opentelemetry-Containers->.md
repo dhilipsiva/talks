@@ -18,7 +18,7 @@ template: invert
 - Dad of 2. Environmentalist. Story Teller. Gamer.
 - Jack of all trades & Master of none
 - [http://dhilipsiva.com](http://dhilipsiva.com)
-- [dhilipsiva@pm.me](mailto:dhilipsiva@gmail.com)
+- [dhilipsiva@pm.me](mailto:dhilipsiva@pm.me)
 
 ---
 

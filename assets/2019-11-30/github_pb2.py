@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x0cgithub.proto\"\x1d\n\x07Request\x12\x12\n\nrequest_id\x18\x01 \x01(\t\"\x14\n\x05Reply\x12\x0b\n\x03msg\x18\x01 \x01(\t2,\n\x07\x41\x63\x63ount\x12!\n\x0bGetUserName\x12\x08.Request\x1a\x06.Reply\"\x00\x32+\n\x04Gist\x12#\n\rGetPublicGist\x12\x08.Request\x1a\x06.Reply\"\x00\x32-\n\x04Repo\x12%\n\x0fGetLatestCommit\x12\x08.Request\x1a\x06.Reply\"\x00\x32/\n\x08\x43ommonDB\x12#\n\rGetCommonData\x12\x08.Request\x1a\x06.Reply\"\x00\x32+\n\x06\x43odeDB\x12!\n\x0bGetCodeData\x12\x08.Request\x1a\x06.Reply\"\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x0cgithub.proto\"\x1d\n\x07Request\x12\x12\n\nrequest_id\x18\x01 \x01(\t\"\x14\n\x05Reply\x12\x0b\n\x03msg\x18\x01 \x01(\t2S\n\x07\x41\x63\x63ount\x12!\n\x0bGetUserName\x12\x08.Request\x1a\x06.Reply\"\x00\x12%\n\x0fSetUserPassword\x12\x08.Request\x1a\x06.Reply\"\x00\x32+\n\x04Gist\x12#\n\rGetPublicGist\x12\x08.Request\x1a\x06.Reply\"\x00\x32-\n\x04Repo\x12%\n\x0fGetLatestCommit\x12\x08.Request\x1a\x06.Reply\"\x00\x32/\n\x08\x43ommonDB\x12#\n\rGetCommonData\x12\x08.Request\x1a\x06.Reply\"\x00\x32+\n\x06\x43odeDB\x12!\n\x0bGetCodeData\x12\x08.Request\x1a\x06.Reply\"\x00\x62\x06proto3')
 )
 
 
@@ -114,12 +114,21 @@ _ACCOUNT = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   serialized_start=69,
-  serialized_end=113,
+  serialized_end=152,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetUserName',
     full_name='Account.GetUserName',
     index=0,
+    containing_service=None,
+    input_type=_REQUEST,
+    output_type=_REPLY,
+    serialized_options=None,
+  ),
+  _descriptor.MethodDescriptor(
+    name='SetUserPassword',
+    full_name='Account.SetUserPassword',
+    index=1,
     containing_service=None,
     input_type=_REQUEST,
     output_type=_REPLY,
@@ -137,8 +146,8 @@ _GIST = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=1,
   serialized_options=None,
-  serialized_start=115,
-  serialized_end=158,
+  serialized_start=154,
+  serialized_end=197,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetPublicGist',
@@ -161,8 +170,8 @@ _REPO = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=2,
   serialized_options=None,
-  serialized_start=160,
-  serialized_end=205,
+  serialized_start=199,
+  serialized_end=244,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetLatestCommit',
@@ -185,8 +194,8 @@ _COMMONDB = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=3,
   serialized_options=None,
-  serialized_start=207,
-  serialized_end=254,
+  serialized_start=246,
+  serialized_end=293,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetCommonData',
@@ -209,8 +218,8 @@ _CODEDB = _descriptor.ServiceDescriptor(
   file=DESCRIPTOR,
   index=4,
   serialized_options=None,
-  serialized_start=256,
-  serialized_end=299,
+  serialized_start=295,
+  serialized_end=338,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetCodeData',

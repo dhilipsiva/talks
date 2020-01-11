@@ -19,6 +19,11 @@ class AccountStub(object):
         request_serializer=github__pb2.Request.SerializeToString,
         response_deserializer=github__pb2.Reply.FromString,
         )
+    self.SetUserPassword = channel.unary_unary(
+        '/Account/SetUserPassword',
+        request_serializer=github__pb2.Request.SerializeToString,
+        response_deserializer=github__pb2.Reply.FromString,
+        )
 
 
 class AccountServicer(object):
@@ -32,11 +37,23 @@ class AccountServicer(object):
     context.set_details('Method not implemented!')
     raise NotImplementedError('Method not implemented!')
 
+  def SetUserPassword(self, request, context):
+    # missing associated documentation comment in .proto file
+    pass
+    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+    context.set_details('Method not implemented!')
+    raise NotImplementedError('Method not implemented!')
+
 
 def add_AccountServicer_to_server(servicer, server):
   rpc_method_handlers = {
       'GetUserName': grpc.unary_unary_rpc_method_handler(
           servicer.GetUserName,
+          request_deserializer=github__pb2.Request.FromString,
+          response_serializer=github__pb2.Reply.SerializeToString,
+      ),
+      'SetUserPassword': grpc.unary_unary_rpc_method_handler(
+          servicer.SetUserPassword,
           request_deserializer=github__pb2.Request.FromString,
           response_serializer=github__pb2.Reply.SerializeToString,
       ),

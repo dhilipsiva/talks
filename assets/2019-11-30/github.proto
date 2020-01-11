@@ -10,6 +10,7 @@ message Reply {
 
 service Account {
   rpc GetUserName (Request) returns (Reply) {}
+  rpc SetUserPassword (Request) returns (Reply) {}
 }
 
 service Gist {
