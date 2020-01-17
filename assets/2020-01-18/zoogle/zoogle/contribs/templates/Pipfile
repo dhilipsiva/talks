@@ -4,16 +4,8 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-neovim = "*"
-ipython = "*"
-flake8 = "*"
-ipdb = "*"
 
 [packages]
-django = "*"
-grpcio = "*"
-grpcio-tools = "*"
-django-extensions = "*"
 django-bootstrap4 = "*"
 
 [requires]

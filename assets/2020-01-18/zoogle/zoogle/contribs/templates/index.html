@@ -1,11 +1,37 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width" />
-        <title>Foo</title>
-    </head>
-    <body>
-       <h1>Foo</h1>
-    </body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Cloud Native Bangalore</h1>
+    <p class="lead">
+        OpenTelemetry + Jaeger Demo
+    </p>
+</div>
+<div class="container">
+    <div class="card-deck mb-3 text-center">
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <h1 class="card-title">
+                    Server Side Rendering
+                </h1>
+                <a href="{% url "ssr" %}" type="button" class="btn btn-lg btn-block btn-outline-primary">SSR</a>
+            </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <h1 class="card-title">
+                    Render with Ajax endpoints
+                </h1>
+                <a href="{% url "ajax" %}" type="button" class="btn btn-lg btn-block btn-outline-primary">Ajax</a>
+            </div>
+        </div>
+        <div class="card mb-4 box-shadow">
+            <div class="card-body">
+                <h1 class="card-title">
+                    Search Zmail and Zdocs
+                </h1>
+                <a href="{% url "search" %}" type="button" class="btn btn-lg btn-block btn-outline-primary">Search</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
