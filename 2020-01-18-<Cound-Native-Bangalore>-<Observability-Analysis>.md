@@ -3,11 +3,11 @@ $theme: gaia
 template: invert
 -->
 
-# talks
+# OpenTelemetry + Jaeger
 
-## Notes for Talks / Presentations / Demos that I give at various events.
+#### Container Meetup, Bangalore
 
-## [@dhilipsiva](https://github.com/dhilipsiva)
+#### [@dhilipsiva](https://github.com/dhilipsiva)
 
 ---
 
@@ -18,7 +18,7 @@ template: invert
 - Dad of 2. Environmentalist. Story Teller. Gamer.
 - Jack of all trades & Master of none
 - [http://dhilipsiva.com](http://dhilipsiva.com)
-- [dhilipsiva@gmail.com](mailto:dhilipsiva@gmail.com)
+- [dhilipsiva@pm.me](mailto:dhilipsiva@pm.me)
 
 ---
 
@@ -27,11 +27,77 @@ template: invert
 ---
 
 
-# Talks that I gave that resides in other repos
+# Why Distributed Tracing?
+* Distributed microservices
+* Hard to debug process flow in conventional tracing
+* context propagation
 
-### [Muthayammal Engineering College's GEMS Club inauguration talk](https://github.com/dhilipsiva/mec-gems)
-### [Intro & Comparison to Open Source PaaS Solutions (Deis / Dokku / Flynn)](https://github.com/dhilipsiva/open-source-paas)
-### [Introduction to Big Data with practical use-cases](https://github.com/dhilipsiva/intro-to-big-data)
+---
+
+#### OpenTracing + OpenCensus
+#### =
+# OpenTelemetry
+
+---
+
+# Before we get started
+
+- It's okay to not know python for this talk. You can use the same prinsiples in other languages too
+- How many of you are comfortable with containers?
+- How many of you are comfortable with gRPC?
+- Have anyone use ***traefik*** before?
+
+---
+
+# Specification 101
+
+* Span
+* Traces
+* SpanContext
+
+---
+
+# OpenTelemetry Data Model
+
+```
+Causal relationships between Spans in a single Trace
+
+
+        [Span A]  ←←←(the root span)
+            |
+     +------+------+
+     |             |
+ [Span B]      [Span C] ←←←(Span C is a `ChildOf` Span A)
+     |             |
+ [Span D]      +---+-------+
+               |           |
+           [Span E]    [Span F] >>> [Span G] >>> [Span H]
+                                       ↑
+                                       ↑
+                                       ↑
+                         (Span G `FollowsFrom` Span F)
+```
+
+---
+
+## Visualize Traces with a time axis
+
+```
+Temporal relationships between Spans in a single Trace
+
+
+––|–––––––|–––––––|–––––––|–––––––|–––––––|–––––––|–> time
+
+ [Span A············································]
+   [Span B·······································]
+      [Span D··································]
+    [Span C·································]
+         [Span E·······]  [Span F··] [Span G··] [Span H··]
+```
+
+---
+
+# Demo
 
 ---
 
@@ -46,3 +112,4 @@ This copy is released under the [MIT License](https://github.com/dhilipsiva/talk
 
 # Questions:question:
 [http://dhilipsiva.com](http://dhilipsiva.com)
+[dhilipsiva@pm.me](mailto:dhilipsiva@pm.me)
