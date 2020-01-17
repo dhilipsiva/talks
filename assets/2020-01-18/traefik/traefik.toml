@@ -1,0 +1,39 @@
+logLevel = "DEBUG"
+defaultEntryPoints = ["http"]
+
+[retry]
+
+[docker]
+exposedByDefault = false
+
+
+[Global]
+debug = true
+
+[log]
+level = "DEBUG"
+
+[accessLog]
+# format = "json"
+
+[api]
+entryPoint = "traefik"
+rule = "Host(`traefik.192.168.99.113.xip.io`)"
+dashboard = false
+
+[ping]
+
+# Entrypoints, http and https
+[entryPoints]
+  # http should be redirected to https
+  [entryPoints.http]
+  address = ":80"
+
+[tracing]
+  [tracing.jaeger]
+    samplingServerURL = "http://jaeger:5778/sampling"
+    localAgentHostPort = "jaeger:6831"
+    gen128Bit = true
+
+  [tracing.jaeger.collector]
+    endpoint = "http://jaeger:14268/api/traces?format=jaeger.thrift"

@@ -18,6 +18,8 @@ django-bootstrap4 = "*"
 opentelemetry-api = "*"
 opentelemetry-sdk = "*"
 opentelemetry-ext-wsgi = "*"
+gunicorn = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.7"

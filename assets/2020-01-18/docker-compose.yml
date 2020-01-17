@@ -1,0 +1,70 @@
+version: '3'
+
+volumes:
+  postgres_data: {}
+
+services:
+
+  postgres:
+    env_file: .env
+    restart: always
+    image: postgres:latest
+    ports:
+      - 5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  worker: &worker
+    env_file: .env
+    restart: "no"
+    build: .
+    command: echo foo
+    links:
+      - postgres:postgres
+
+  zdocs:
+    <<: *worker
+    command: python manage.py zdocs_server
+
+  zmail:
+    <<: *worker
+    command: python manage.py zmail_server
+
+  zoogle:
+    <<: *worker
+    command: gunicorn zoogle.wsgi:application -b :${BACKEND_PORT}
+    expose:
+      - ${BACKEND_PORT}
+    labels:
+      - traefik.enable=true
+      - traefik.backend.domain=zoogle.${VM_IP}.xip.io
+      - traefik.frontend.rule=Host:zoogle.${VM_IP}.xip.io
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.16
+    ports:
+      - 5775:5775/udp
+      - 6831:6831/udp
+      - 6832:6832/udp
+      - 5778:5778
+      - 16686:16686
+      - 14268:14268
+      - 9411:9411
+    expose:
+     - 16686
+    labels:
+      - traefik.port=16686
+      - traefik.enable=true
+      - traefik.backend.domain=jaeger.${VM_IP}.xip.io
+      - traefik.frontend.rule=Host:jaeger.${VM_IP}.xip.io
+
+  traefik:
+    env_file: .env
+    build: traefik
+    depends_on:
+      - zoogle
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 0.0.0.0:80:80
+      - 0.0.0.0:8080:8080

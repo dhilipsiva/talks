@@ -25,7 +25,7 @@ SECRET_KEY = '9f+bip6$gb^232^a06rex2d$c@_n-apq)in4-09ir7uonv%z-8'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -84,8 +84,12 @@ WSGI_APPLICATION = 'zoogle.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'zoogle',
+        'USER': 'zoogle',
+        'PASSWORD': 'zoogle',
+        'HOST': 'postgres',
+        'PORT': 5432,
     }
 }
 
@@ -128,4 +132,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 ZMAIL_PORT = 50050
+ZMAIL_HOST = 'zmail'
 ZDOCS_PORT = 50051
+ZDOCS_HOST = 'zdocs'

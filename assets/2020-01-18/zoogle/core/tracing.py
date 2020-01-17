@@ -14,14 +14,14 @@ tracer = trace.tracer_source().get_tracer(__name__)
 
 # create a JaegerSpanExporter
 jaeger_exporter = jaeger.JaegerSpanExporter(
-    service_name='my-helloworld-service',
+    service_name='zoogle',
     # configure agent
-    agent_host_name='localhost',
+    agent_host_name='jaeger',
     agent_port=6831,
     # optional: configure also collector
-    # collector_host_name='localhost',
-    # collector_port=14268,
-    # collector_endpoint='/api/traces?format=jaeger.thrift',
+    collector_host_name='jaeger',
+    collector_port=14268,
+    collector_endpoint='/api/traces?format=jaeger.thrift',
     # username=xxxx, # optional
     # password=xxxx, # optional
 )
