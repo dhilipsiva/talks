@@ -15,6 +15,12 @@ grpcio = "*"
 grpcio-tools = "*"
 django-extensions = "*"
 django-bootstrap4 = "*"
+opentelemetry-api = "*"
+opentelemetry-sdk = "*"
+opentelemetry-ext-wsgi = "*"
 
 [requires]
 python_version = "3.7"
+
+[pipenv]
+allow_prereleases = true
