@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'zoogle.zmail',
     'zoogle.zdocs',
     'zoogle.zsearch',
+    'zoogle.contribs',
 ]
 
 MIDDLEWARE = [
