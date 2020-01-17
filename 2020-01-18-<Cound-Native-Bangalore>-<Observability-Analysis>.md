@@ -107,7 +107,7 @@ Temporal relationships between Spans in a single Trace
 
 This copy is released under the [MIT License](https://github.com/dhilipsiva/talks/blob/master/LICENSE)
 
-[Source Code](https://github.com/dhilipsiva/talks/blob/master/2018-07-25-<Garuda-Automagically-Exposing-Djagno-Orm-Over-Grpc-For-Microservices-Written-In-Any-Other-Languages->.md)
+[Source Code](https://github.com/dhilipsiva/talks/blob/master/2020-01-18-%3CCound-Native-Bangalore%3E-%3CObservability-Analysis%3E.md)
 [SlideShare Link](http://www.slideshare.net/dhilipsiva)
 
 # Questions:question:
