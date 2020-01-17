@@ -1,4 +1,46 @@
 {% extends "base.html" %}
 {% block content %}
-SSR
+<h1>Zmails</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Subject</th>
+            <th scope="col">Description</th>
+            <th scope="col">From</th>
+            <th scope="col">To</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for zmail in zmails %}
+        <tr>
+            <th>{{zmail.subject}}</th>
+            <td>{{zmail.description}}</td>
+            <td>{{zmail.from_addr}}</td>
+            <td>{{zmail.to_addr}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<hr />
+<h1>Zdocs</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Subject</th>
+            <th scope="col">Description</th>
+            <th scope="col">Owner</th>
+            <th scope="col">Size</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for zdoc in zdocs %}
+        <tr>
+            <th>{{zdoc.subject}}</th>
+            <td>{{zdoc.description}}</td>
+            <td>@{{zdoc.owner}}</td>
+            <td>{{zdoc.size}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock content %}
