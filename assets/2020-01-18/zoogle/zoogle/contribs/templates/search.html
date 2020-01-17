@@ -1,4 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>SEARCH</h1>
+<h1>Search</h1>
+<hr />
+<form method="GET" class="form-inline">
+    <div class="form-group">
+        <input name="query" type="text" class="form-control" placeholder="Enter query" value="{{query}}"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<hr />
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Subject</th>
+            <th scope="col">Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for result in results %}
+        <tr>
+            <th>{{result.subject}}</th>
+            <td>{{result.description}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endblock content %}

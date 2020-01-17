@@ -1,4 +1,92 @@
 {% extends "base.html" %}
 {% block content %}
-SSR
+<h1>Ajax</h1>
+<hr />
+<h2>Zmails</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Subject</th>
+            <th scope="col">Description</th>
+            <th scope="col">From</th>
+            <th scope="col">To</th>
+        </tr>
+    </thead>
+    <tbody id="zmails">
+    </tbody>
+</table>
+<hr />
+<h2>Zdocs</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Subject</th>
+            <th scope="col">Description</th>
+            <th scope="col">Owner</th>
+            <th scope="col">Size</th>
+        </tr>
+    </thead>
+    <tbody id="zdocs">
+    </tbody>
+</table>
+<script charset="utf-8" type="text/javascript">
+    fetch('/zmail')
+        .then((response) => {
+            return response.json();
+        })
+        .then((mails) => {
+            var zmail = document.getElementById('zmails')
+            mails.data.forEach(function(mail){
+                var tr = document.createElement('tr')
+
+                var th = document.createElement('th')
+                th.innerText = mail.subject
+                tr.appendChild(th)
+
+                var td1 = document.createElement('td')
+                td1.innerText = mail.description
+                tr.appendChild(td1)
+
+                var td2 = document.createElement('td')
+                td2.innerText = mail.from_addr
+                tr.appendChild(td2)
+
+                var td3 = document.createElement('td')
+                td3.innerText = mail.to_addr
+                tr.appendChild(td3)
+
+                zmail.appendChild(tr)
+            })
+        });
+
+    fetch('/zdocs')
+        .then((response) => {
+            return response.json();
+        })
+        .then((docs) => {
+
+            var zdocs = document.getElementById('zdocs')
+            docs.data.forEach(function(doc){
+                var tr = document.createElement('tr')
+
+                var th = document.createElement('th')
+                th.innerText = doc.subject
+                tr.appendChild(th)
+
+                var td1 = document.createElement('td')
+                td1.innerText = doc.description
+                tr.appendChild(td1)
+
+                var td2 = document.createElement('td')
+                td2.innerText = doc.owner
+                tr.appendChild(td2)
+
+                var td3 = document.createElement('td')
+                td3.innerText = doc.size
+                tr.appendChild(td3)
+
+                zdocs.appendChild(tr)
+            })
+        });
+</script>
 {% endblock content %}

@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+message Void {
+}
+
+message Query {
+  string text = 1;
+}
+
+message Result {
+  string subject = 1;
+  string description = 2;
+}
+
+message Mail {
+  string subject = 1;
+  string description = 2;
+  string from_addr = 3;
+  string to_addr = 4;
+}
+
+message Doc {
+  string subject = 1;
+  string description = 2;
+  string owner = 3;
+  int32 size = 4;
+}
+
+
+service Zmail {
+  rpc Mails (Void) returns (stream Mail) {}
+  rpc Search (Query) returns (stream Result) {}
+}
+
+service Zdocs {
+  rpc Docs (Void) returns (stream Doc) {}
+  rpc Search (Query) returns (stream Result) {}
+}
