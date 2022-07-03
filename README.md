@@ -1,7 +1,10 @@
-<!--
-$theme: gaia
-template: invert
--->
+---
+marp: true
+theme: gaia
+class:
+  - lead
+  - invert
+---
 
 # talks
 
@@ -14,9 +17,7 @@ template: invert
 ## Vice President Of Engineering @ [Reckonsys](https://www.reckonsys.com/)
 ## Chief Technology Officer @ [Nitimis](https://nitimis.com/)
 
----
-
-An Optimistic Nihilist who loves Science, Python, Rust, FOSS, e-Games, Fitness, Astrophysics & தமிழ்.  Jack of all trades & Master of none. She/He.r.
+An Optimistic Nihilist who loves Science, Python, Rust, FOSS, e-Games, Fitness, Astrophysics & தமிழ்.  Jack of all trades & Master of none.
 ## [https://dhilipsiva.com](https://dhilipsiva.com)
 ## [dhilipsiva@pm.me](mailto:dhilipsiva@pm.me)
 
