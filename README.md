@@ -18,7 +18,7 @@ class:
 ## Chief Technology Officer @ [Nitimis](https://nitimis.com/)
 
 An Optimistic Nihilist who loves Science, Python, Rust, FOSS, e-Games, Fitness, Astrophysics & தமிழ்.  Jack of all trades & Master of none.
-## [https://dhilipsiva.com](https://dhilipsiva.com)
+## [https://dhilipsiva.dev](https://dhilipsiva.dev)
 ## [dhilipsiva@pm.me](mailto:dhilipsiva@pm.me)
 
 ---
@@ -47,4 +47,4 @@ This copy is released under the [MIT License](https://github.com/dhilipsiva/talk
 [SlideShare Link](https://www.slideshare.net/dhilipsiva)
 
 # Questions:question:
-[https://dhilipsiva.com](https://dhilipsiva.com)
+[https://dhilipsiva.dev](https://dhilipsiva.dev)
